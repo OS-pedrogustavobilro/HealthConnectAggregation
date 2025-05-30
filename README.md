@@ -1,6 +1,6 @@
 # Health Connect Crash reproduction
 
-Google Issue Tracker
+Google Issue Tracker: https://issuetracker.google.com/issues/421325344
 
 This repository contains a simple android app to reproduce a crash in HealthConnect's `aggregateGroupByDuration`. Clicking the button below will crash the app in Android 14 and above.
 
