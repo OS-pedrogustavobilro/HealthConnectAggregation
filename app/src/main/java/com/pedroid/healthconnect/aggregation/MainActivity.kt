@@ -74,8 +74,8 @@ class MainActivity : ComponentActivity() {
 
     private fun aggregate() {
         lifecycleScope.launch(Dispatchers.Default) {
-            val splitNumber = 25
-            val startDate = LocalDateTime.now().minusYears(2L).truncatedTo(ChronoUnit.HOURS)
+            val splitNumber = 20
+            val startDate = LocalDateTime.now().minusMonths(6L).truncatedTo(ChronoUnit.HOURS)
             val endDate = LocalDateTime.now()
             val totalDuration = Duration.between(startDate, endDate)
             val stepSeconds = totalDuration.seconds / (splitNumber - 1)
