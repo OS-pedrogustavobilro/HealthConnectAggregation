@@ -2,7 +2,7 @@
 
 Google Issue Tracker: https://issuetracker.google.com/issues/421325344
 
-This repository contains a simple android app to reproduce a crash in HealthConnect's `aggregateGroupByDuration`. Clicking the button below will crash the app in Android 14 and above.
+This repository contains a simple android app to reproduce a crash in HealthConnect's `aggregateGroupByDuration`. Clicking the button below will crash the app in Android 15 and above.
 
 ![img.png](img.png)
 
@@ -47,6 +47,6 @@ As an example, the app creates 20 splits from the past 6 months with `LocalDateT
 When debugging, the crash occurs because for the last hour slice, 2025-04-03T05:00-2025-04-03T06:00, the `endDate` is at 05:00 (same as start) instead of 06:00.
 Why it crashes for that split in particular, I'm not sure, but at least it's consistent.
 
-From my tests it only happens in Android 14 devices and above, which would indicate the problem lies somewhere in the HealthConnect SDK's implementation for those versions (`HealthConnectClientUpsideDownImpl`), or on the actual android Framework code.
+From my tests it only happens in Android 15 devices and above, which may indicate the problem lies somewhere in the HealthConnect SDK's implementation for those versions (`HealthConnectClientUpsideDownImpl` - which technically is used from Android 14, but it doesn't seem to crash on Android 14), or on the actual android Framework code.
 
 Timezone that I tested with is London (at the time of writing it's BST or GMT+1).
