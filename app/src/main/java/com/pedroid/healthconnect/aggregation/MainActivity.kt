@@ -110,7 +110,7 @@ fun Screen(
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Text(
-            text = "Testing Health Connect Aggregation By Duration (Hour) - Crashes in Android 14+\n\nThis example uses Heart Rate. You can change the source code to request a different kind of data",
+            text = "Testing Health Connect Aggregation By Duration (Hour) - Crashes in Android 15+\n\nThis example uses Heart Rate. You can change the source code to request a different kind of data",
         )
         Button(onClick = onButtonClick) {
             Text("Click to Test Aggregate Health Data")
